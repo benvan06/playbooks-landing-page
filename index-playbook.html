@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data & AI Infrastructure Playbook — Free Download | AGI Automations</title>
+  <meta name="description" content="Get the free Data & AI Infrastructure Playbook. A practical, boardroom-ready guide to design modern data foundations, deploy AI safely, and drive adoption.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --agi-purple:#6430EC;
+      --agi-dark:#0F1222;
+      --agi-text:#2A2E43;
+      --agi-muted:#6B7280;
+      --agi-bg:#FFFFFF;
+      --agi-soft:#F7F8FA;
+      --agi-border:#E6E8EE;
+      --radius:14px;
+      --shadow:0 10px 25px rgba(20, 22, 35, 0.06);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--agi-bg);color:var(--agi-text);font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.5}
+    a{color:var(--agi-purple);text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .container{width:min(1120px, 92%); margin-inline:auto}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:14px 20px;border-radius:12px;border:1px solid transparent;font-weight:600;cursor:pointer;transition:.2s;}
+    .btn-primary{background:var(--agi-purple);color:#fff;box-shadow:0 10px 20px rgba(100,48,236,.18)}
+    .btn-primary:hover{transform:translateY(-1px)}
+    .btn-outline{background:#fff;color:var(--agi-purple);border-color:var(--agi-purple)}
+    .badge{display:inline-flex;align-items:center;gap:.5rem;padding:6px 10px;border-radius:999px;background:var(--agi-soft);border:1px solid var(--agi-border);color:var(--agi-muted);font-size:.85rem;font-weight:600}
+    header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--agi-border);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:.75rem;font-weight:700;color:var(--agi-dark)}
+    .brand .logo{width:34px;height:34px;border-radius:8px;background:linear-gradient(145deg, var(--agi-purple), #7E5BFF);display:inline-block}
+    .hero{padding:56px 0 24px}
+    .hero-grid{display:grid;grid-template-columns: 1.1fr .9fr; gap:36px; align-items:center}
+    .hero h1{font-size: clamp(1.9rem, 2.4vw + 1rem, 3rem); line-height:1.15; margin:10px 0 16px; color:var(--agi-dark)}
+    .hero p.lead{font-size: clamp(1rem, .6vw + .8rem, 1.2rem); color:var(--agi-muted); margin:0 0 18px}
+    .card{background:#fff;border:1px solid var(--agi-border);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .signup{padding:22px}
+    .signup h3{margin:0 0 8px;font-size:1.2rem}
+    form{display:grid;gap:12px;margin-top:8px}
+    label{font-size:.9rem;color:var(--agi-muted)}
+    input, select{padding:12px 14px;border:1px solid var(--agi-border);border-radius:12px;font:inherit;outline:none}
+    input:focus, select:focus{border-color:var(--agi-purple); box-shadow:0 0 0 3px rgba(100,48,236,.12)}
+    .consent{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--agi-muted)}
+    .consent input{margin-top:.2rem}
+    .hero-preview{padding:18px; background:var(--agi-soft); border:1px dashed var(--agi-border); border-radius:16px}
+    .hero-preview .mock{height:320px;border-radius:12px;background:linear-gradient(180deg, #fff, #f0f2f7);border:1px solid var(--agi-border);display:flex;align-items:center;justify-content:center;color:var(--agi-muted);font-weight:600}
+    .trust{display:flex;gap:22px;flex-wrap:wrap;align-items:center;margin-top:16px}
+    .trust .kpi{padding:10px 14px;border-radius:12px;background:var(--agi-soft);border:1px solid var(--agi-border);font-weight:600}
+    .section{padding:48px 0}
+    .grid-3{display:grid;gap:20px;grid-template-columns:repeat(3, 1fr)}
+    .grid-2{display:grid;gap:22px;grid-template-columns:repeat(2, 1fr)}
+    .feature{padding:18px;border:1px solid var(--agi-border);border-radius:16px;background:#fff}
+    .feature h4{margin:8px 0 6px}
+    .check{display:flex;gap:10px;align-items:flex-start}
+    .check .tick{width:22px;height:22px;border-radius:6px;background:var(--agi-purple);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700}
+    .faq details{border:1px solid var(--agi-border);border-radius:12px;padding:14px 16px;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600}
+    .faq details + details{margin-top:10px}
+    .cta{padding:44px 0;background:linear-gradient(180deg, #fff, #F7F8FA)}
+    footer{border-top:1px solid var(--agi-border);padding:22px 0;margin-top:24px}
+    .footerbar{margin-top:12px;border-radius:10px;background:var(--agi-purple);color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;font-weight:600}
+    .small{font-size:.85rem;color:#DAD6FF}
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+    }
+  </style>
+  <!-- Placeholder for analytics/tracking pixels -->
+  <script>
+    // TODO: Add your analytics (GA4/Meta/LinkedIn) here.
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <span>AGI Automations</span>
+      </div>
+      <nav aria-label="Main">
+        <a href="#inside">What’s Inside</a>
+        <span style="opacity:.4;margin:0 10px">•</span>
+        <a href="#benefits">Benefits</a>
+        <span style="opacity:.4;margin:0 10px">•</span>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">Free Download • Executive Guide</span>
+          <h1>Data & AI Infrastructure Playbook</h1>
+          <p class="lead">A practical, boardroom‑ready guide to build a reliable data foundation, deploy AI safely, and drive adoption across your organisation.</p>
+          <ul style="margin:0 0 14px 1.1rem;color:var(--agi-muted)">
+            <li>Design modern data architecture that scales.</li>
+            <li>Ship AI use‑cases with governance & guardrails.</li>
+            <li>Embed change management so people actually use it.</li>
+          </ul>
+          <div class="trust">
+            <div class="kpi">30+ pages, executive-ready</div>
+            <div class="kpi">Templates & checklists included</div>
+            <div class="kpi">GDPR‑aware guidance</div>
+          </div>
+        </div>
+
+        <div class="card signup">
+          <h3>Get the free playbook</h3>
+          <p style="margin:0 0 8px; color:var(--agi-muted)">Enter your details and we’ll send the PDF straight to your inbox.</p>
+          <form action="#" method="post">
+            <div>
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email" placeholder="you@company.com" required>
+            </div>
+            <div class="grid-2">
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" placeholder="Jane Smith" required>
+              </div>
+              <div>
+                <label for="company">Company (optional)</label>
+                <input id="company" name="company" type="text" placeholder="Acme Estates">
+              </div>
+            </div>
+            <div>
+              <label for="role">Role (optional)</label>
+              <select id="role" name="role">
+                <option value="">Select a role</option>
+                <option>CEO / Founder</option>
+                <option>COO / Operations</option>
+                <option>CTO / Head of IT</option>
+                <option>Head of Data / Insights</option>
+                <option>Marketing / Growth</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <label class="consent">
+              <input type="checkbox" name="consent" required />
+              <span>I agree to receive the playbook and occasional emails about data & AI strategy. You can unsubscribe anytime. We respect your privacy.</span>
+            </label>
+            <button class="btn btn-primary" type="submit">Send me the Playbook</button>
+            <p style="margin:8px 0 0; font-size:.85rem; color:var(--agi-muted)">We’ll never sell your data. <a href="#privacy">Privacy Policy</a></p>
+          </form>
+        </div>
+      </div>
+      <div class="container" style="margin-top:26px">
+        <div class="hero-preview">
+          <div class="mock">Playbook cover & sample page previews (placeholder)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inside -->
+    <section id="inside" class="section">
+      <div class="container">
+        <h2 style="margin:0 0 14px; color:var(--agi-dark)">What’s inside the playbook</h2>
+        <div class="grid-3">
+          <div class="feature">
+            <div class="check"><span class="tick">✓</span><div><h4>Modern Data Architecture</h4><p class="muted">Reference patterns for lakehouse, ELT/ETL, lineage, access layers, and observability.</p></div></div>
+          </div>
+          <div class="feature">
+            <div class="check"><span class="tick">✓</span><div><h4>AI Infrastructure & Guardrails</h4><p class="muted">How to deploy LLM use‑cases with security, evaluation, and cost controls built‑in.</p></div></div>
+          </div>
+          <div class="feature">
+            <div class="check"><span class="tick">✓</span><div><h4>Change Management</h4><p class="muted">Communication, training, KPIs, and playbooks to embed adoption — not shelfware.</p></div></div>
+          </div>
+          <div class="feature">
+            <div class="check"><span class="tick">✓</span><div><h4>Governance & Compliance</h4><p class="muted">Templates for roles (RACI), risk registers, DPIA prompts, and data quality gates.</p></div></div>
+          </div>
+          <div class="feature">
+            <div class="check"><span class="tick">✓</span><div><h4>Roadmap & Templates</h4><p class="muted">90‑day roadmap, discovery guides, KPI dashboards, and success metrics.</p></div></div>
+          </div>
+          <div class="feature">
+            <div class="check"><span class="tick">✓</span><div><h4>Real‑World Examples</h4><p class="muted">Mini‑case studies from multi‑branch organisations and marketing teams.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="section" style="background:var(--agi-soft); border-top:1px solid var(--agi-border); border-bottom:1px solid var(--agi-border)">
+      <div class="container">
+        <h2 style="margin-top:0;color:var(--agi-dark)">Why leaders download this</h2>
+        <div class="grid-3">
+          <div class="feature">
+            <h4>Clarity</h4>
+            <p>See exactly how data, AI, and change fit together—without buzzwords.</p>
+          </div>
+          <div class="feature">
+            <h4>Speed</h4>
+            <p>Shortcut months of research with ready‑to‑use templates and checklists.</p>
+          </div>
+          <div class="feature">
+            <h4>Safety</h4>
+            <p>Mitigate risk with governance, evaluation, and GDPR‑aware practices.</p>
+          </div>
+        </div>
+        <div class="card" style="padding:18px; margin-top:22px">
+          <div class="grid-2">
+            <div>
+              <h3 style="margin:0 0 6px">Who it’s for</h3>
+              <p class="muted">CEOs, COOs, CTOs, Heads of Data/IT, and Operations Leaders in multi‑branch organisations who want an actionable, plain‑English guide.</p>
+              <ul style="margin:8px 0 0 1.1rem; color:var(--agi-muted)">
+                <li>Growing teams buried under manual reporting.</li>
+                <li>Messy integrations and duplicate data across systems.</li>
+                <li>Ambitious AI plans with no foundation or governance.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="margin:0 0 6px">What you’ll walk away with</h3>
+              <ul style="margin:8px 0 0 1.1rem; color:var(--agi-muted)">
+                <li>A 90‑day action plan to get momentum.</li>
+                <li>Architecture and governance reference designs.</li>
+                <li>Adoption playbook to make change stick.</li>
+              </ul>
+              <div style="margin-top:14px">
+                <a href="#top-form" class="btn btn-primary">Send me the Playbook</a>
+                <span style="margin-left:10px; font-size:.9rem; color:var(--agi-muted)">Free • PDF • Instant email</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="section">
+      <div class="container">
+        <h2 style="margin:0 0 12px">What readers say</h2>
+        <div class="grid-3">
+          <div class="feature">
+            <p>“Best primer I’ve seen for leaders. Clear, actionable, and no fluff. We used it to align our 90‑day plan.”</p>
+            <p style="color:var(--agi-muted); font-weight:600">— Operations Director</p>
+          </div>
+          <div class="feature">
+            <p>“Finally a guide that connects data plumbing with real business outcomes and adoption.”</p>
+            <p style="color:var(--agi-muted); font-weight:600">— Head of Data</p>
+          </div>
+          <div class="feature">
+            <p>“The templates alone saved our team weeks. Immediate value.”</p>
+            <p style="color:var(--agi-muted); font-weight:600">— CTO</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container card" style="padding:22px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px">
+        <div>
+          <h3 style="margin:0">Get the Data & AI Infrastructure Playbook</h3>
+          <p style="margin:6px 0 0; color:var(--agi-muted)">Free PDF • 30+ pages • Templates included</p>
+        </div>
+        <a class="btn btn-primary" href="#top-form">Send me the Playbook</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container faq">
+        <h2 style="margin:0 0 10px">Frequently asked questions</h2>
+        <details>
+          <summary>Is the playbook really free?</summary>
+          <p>Yes. Enter your email to receive the PDF. You can unsubscribe anytime.</p>
+        </details>
+        <details>
+          <summary>Can I share it with my team?</summary>
+          <p>Absolutely. Please share the original PDF or link.</p>
+        </details>
+        <details>
+          <summary>Does this include technical architecture diagrams?</summary>
+          <p>Yes—reference diagrams, governance templates, and a 90‑day roadmap are included.</p>
+        </details>
+        <details>
+          <summary>Will you spam me?</summary>
+          <p>No. You’ll receive the playbook and occasional high‑value content on data & AI strategy.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Privacy anchor -->
+    <div id="privacy" class="container" style="padding-bottom:12px; color:var(--agi-muted); font-size:.9rem">
+      <p><strong>Privacy:</strong> We collect your details solely to deliver the playbook and optional updates. We won’t sell your data. For deletion requests, contact support@agiautomations.co.uk.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <p style="margin:0;color:var(--agi-muted)">&copy; <span id="year"></span> AGI Automations. All rights reserved.</p>
+        <div style="display:flex;gap:14px">
+          <a href="#privacy">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+      <div class="footerbar" aria-label="AGI footer bar">
+        <span>AGI AUTOMATIONS • Build Systems People Actually Use</span>
+        <span class="small">Data & AI Strategy</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Move top form anchor to signup card
+    const signup = document.querySelector('.signup');
+    if(signup){
+      const anchor = document.createElement('a');
+      anchor.id = 'top-form';
+      signup.prepend(anchor);
+    }
+  </script>
+</body>
+</html>
