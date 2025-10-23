@@ -152,10 +152,30 @@
           </form>
         </div>
       </div>
-      <div class="container" style="margin-top:26px">
-        <div class="hero-preview">
-          <div class="mock">Playbook cover & sample page previews (placeholder)</div>
+        <div class="container" style="margin-top:26px">
+        <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:20px; align-items:start">
+          <!-- Main Purple Cover -->
+          <div style="background:#fff; border:1px solid var(--agi-border); border-radius:16px; padding:20px; box-shadow:var(--shadow)">
+            <img src="playbook-cover-purple.png" alt="Data Infrastructure Playbook Cover" style="width:100%; border-radius:12px; box-shadow:0 8px 20px rgba(100,48,236,0.15)">
+          </div>
+          
+          <!-- Secondary Green Cover -->
+          <div style="background:#fff; border:1px solid var(--agi-border); border-radius:16px; padding:16px; box-shadow:var(--shadow)">
+            <img src="playbook-cover-green.png" alt="AI Infrastructure Playbook Cover" style="width:100%; border-radius:12px; box-shadow:0 6px 16px rgba(16,185,129,0.15)">
+            <p style="margin:12px 0 0; font-size:.85rem; color:var(--agi-muted); text-align:center">
+              <strong>Bonus:</strong> AI Infrastructure guide included
+            </p>
+          </div>
         </div>
+        
+        <!-- Mobile responsive -->
+        <style>
+          @media (max-width: 900px) {
+            .container > div[style*="grid-template-columns"] {
+              grid-template-columns: 1fr !important;
+            }
+          }
+        </style>
       </div>
     </section>
 
@@ -207,7 +227,7 @@
         <div class="card" style="padding:18px; margin-top:22px">
           <div class="grid-2">
             <div>
-              <h3 style="margin:0 0 6px">Who it’s for</h3>
+              <h3 style="margin:0 0 6px">Who it's for</h3>
               <p class="muted">CEOs, COOs, CTOs, Heads of Data/IT, and Operations Leaders in multi‑branch organisations who want an actionable, plain‑English guide.</p>
               <ul style="margin:8px 0 0 1.1rem; color:var(--agi-muted)">
                 <li>Growing teams buried under manual reporting.</li>
@@ -216,20 +236,23 @@
               </ul>
             </div>
             <div>
-              <h3 style="margin:0 0 6px">What you’ll walk away with</h3>
+              <h3 style="margin:0 0 6px">What you'll walk away with</h3>
               <ul style="margin:8px 0 0 1.1rem; color:var(--agi-muted)">
                 <li>A 90‑day action plan to get momentum.</li>
                 <li>Architecture and governance reference designs.</li>
                 <li>Adoption playbook to make change stick.</li>
               </ul>
-              <div style="margin-top:14px">
-                <a href="#top-form" class="btn btn-primary">Send me the Playbook</a>
-                <span style="margin-left:10px; font-size:.9rem; color:var(--agi-muted)">Free • PDF • Instant email</span>
-              </div>
             </div>
           </div>
+          
+          <!-- Centered Button Below -->
+          <div style="margin-top:24px; text-align:center; padding-top:20px; border-top:1px solid var(--agi-border)">
+            <a href="#top-form" class="btn btn-primary" style="padding:14px 28px">Send me the Playbook</a>
+            <p style="margin:10px 0 0; font-size:.9rem; color:var(--agi-muted)">
+              Free • PDF • Instant email
+            </p>
+          </div>
         </div>
-      </div>
     </section>
 
     <!-- Social Proof -->
